@@ -2,7 +2,7 @@ import datetime
 import time
 
 
-class Check_time:
+class CheckTime:
     def __init__(self, path):
         self.file = open(path)
 
@@ -24,5 +24,6 @@ class Check_time:
     def __exit__(self, exc_type, exc_val, exc_tb):
         self.file.close()
 
-with Check_time('war_and_peace.txt') as f:
+
+with CheckTime('war_and_peace.txt') as f:
     print(f)
